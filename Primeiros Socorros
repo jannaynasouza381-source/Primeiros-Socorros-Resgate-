@@ -1,0 +1,23 @@
+PRIMEIROS-SOCORROS-RESGATE/
+│
+├── index.html                    # [Inicial] Página principal
+├── README.md                     # [Inicial] Documentação do projeto
+├── .gitignore                    # [Inicial] Arquivos ignorados pelo Git
+│
+├── pages/
+│   └── orientacoes.html          # [Inicial] Orientações educativas
+│
+├── css/
+│   └── style.css                 # [Inicial] Aparência das páginas
+│
+├── js/
+│   └── main.js                   # [Inicial] Interações da interface
+│
+├── materiais/                    # [Posterior] Criar ao adicionar PDFs
+│   └── primeiros-socorros.pdf    # [Posterior] Material aprovado
+│
+├── tests/                        # [Posterior] Criar ao iniciar os testes
+│   └── README.md                 # Orientações dos testes
+│
+└── notebooks/                    # [Opcional] Experimentos no Colab
+    └── README.md                 # Explicação dos experimentos
