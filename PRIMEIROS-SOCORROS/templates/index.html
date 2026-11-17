@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aplicação escolar para aprender noções introdutórias de primeiros socorros.">
+  <title>Primeiros Socorros | Aprender e Praticar</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="{{ url_for('inicio') }}"><span class="brand-mark">+</span> Primeiros Socorros</a>
+  <nav><a href="#conteudos">Aprender</a><a href="{{ url_for('atividades') }}">Minhas atividades</a><a href="#quiz">Quiz</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">EDUCAÇÃO • PREVENÇÃO • CUIDADO</p>
+      <h1>Conhecimento que<br><span>pode fazer a diferença.</span></h1>
+      <p>Aprenda conceitos básicos de primeiros socorros, revise os conteúdos e acompanhe suas tarefas escolares.</p>
+      <a class="button primary" href="#conteudos">Começar a aprender</a>
+    </div>
+    <div class="hero-card" aria-label="Lembrete de segurança">
+      <div class="cross">+</div><h2>Primeiro, segurança.</h2>
+      <p>Antes de ajudar, observe o ambiente e verifique se é seguro se aproximar.</p>
+      <span class="tag">Regra essencial</span>
+    </div>
+  </section>
+
+  <section class="notice" role="note">
+    <strong>Em uma emergência real:</strong> chame o serviço de emergência local. No Brasil: SAMU 192 ou Bombeiros 193. Este app é educativo e não substitui treinamento prático.
+  </section>
+
+  <section id="conteudos" class="section">
+    <div class="section-heading"><div><p class="eyebrow">TRILHA DE APRENDIZAGEM</p><h2>O que vamos estudar?</h2></div><p>Leia os resumos e depois teste o que aprendeu.</p></div>
+    <div class="lesson-grid">
+      <article class="lesson"><span class="lesson-number">01</span><h3>Segurança da cena</h3><p>Observe riscos como trânsito, fogo, eletricidade ou produtos perigosos. Não se coloque em perigo.</p><small>Conceito básico</small></article>
+      <article class="lesson"><span class="lesson-number">02</span><h3>Pedir ajuda</h3><p>Acione o serviço de emergência. Informe o local, o que aconteceu, quantas pessoas precisam de ajuda e os riscos presentes.</p><small>Comunicação</small></article>
+      <article class="lesson"><span class="lesson-number">03</span><h3>Engasgo</h3><p>Engasgo pode ser grave. Peça ajuda imediatamente e siga as orientações do atendente de emergência. Técnicas variam conforme idade e situação.</p><small>Atenção especial</small></article>
+      <article class="lesson"><span class="lesson-number">04</span><h3>Sangramentos</h3><p>Se for seguro, use luvas ou uma barreira e faça pressão direta com pano limpo ou gaze. Sangramento intenso exige emergência.</p><small>Cuidados iniciais</small></article>
+      <article class="lesson"><span class="lesson-number">05</span><h3>Queimaduras</h3><p>Resfrie a área com água corrente fresca. Não aplique gelo, manteiga ou pasta de dente e não estoure bolhas.</p><small>O que evitar</small></article>
+      <article class="lesson"><span class="lesson-number">06</span><h3>Desmaio</h3><p>Ajude a pessoa a ficar em segurança, observe sua respiração e peça ajuda se não recuperar rapidamente, se houver lesão ou sinais preocupantes.</p><small>Observar e comunicar</small></article>
+    </div>
+  </section>
+
+  <section class="section task-panel" id="tarefas">
+    <div class="section-heading"><div><p class="eyebrow">ORGANIZE SEUS ESTUDOS</p><h2>Minhas tarefas escolares</h2></div><p>Adicione atividades e marque quando terminar.</p></div>
+    <form id="task-form" class="task-form">
+      <label class="sr-only" for="task-input">Nova tarefa</label>
+      <input id="task-input" maxlength="100" placeholder="Ex.: Fazer um resumo sobre segurança da cena" required>
+      <button class="button primary" type="submit">Adicionar tarefa</button>
+    </form>
+    <ul id="task-list" class="task-list" aria-live="polite"></ul>
+    <p id="task-empty" class="muted">Nenhuma tarefa por enquanto. Adicione a primeira acima.</p>
+  </section>
+
+  <section id="quiz" class="section quiz-section">
+    <div class="section-heading"><div><p class="eyebrow">REVISE O CONTEÚDO</p><h2>Quiz rápido</h2></div><p>Uma pergunta para praticar.</p></div>
+    <div class="quiz-card">
+      <p class="question">Ao encontrar alguém precisando de ajuda, qual deve ser uma das primeiras atitudes?</p>
+      <div class="answers">
+        <button class="answer" data-correct="false">Correr até a pessoa sem observar o local.</button>
+        <button class="answer" data-correct="true">Verificar se o local é seguro e pedir ajuda.</button>
+        <button class="answer" data-correct="false">Dar água ou comida imediatamente.</button>
+      </div>
+      <p id="quiz-feedback" class="feedback" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+<footer><p>Projeto escolar • Primeiros Socorros</p><p>Aprender, prevenir e buscar ajuda com responsabilidade.</p></footer>
+</body>
+</html>

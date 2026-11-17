@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atividades | Primeiros Socorros</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="{{ url_for('inicio') }}"><span class="brand-mark">+</span> Primeiros Socorros</a><nav><a href="{{ url_for('inicio') }}">Início</a><a href="{{ url_for('inicio') }}#conteudos">Conteúdos</a></nav></header>
+<main class="section standalone">
+  <p class="eyebrow">PLANEJAMENTO ESCOLAR</p><h1>Minhas atividades</h1>
+  <p class="muted">Suas tarefas ficam salvas neste navegador. Você pode adicionar, concluir ou remover cada item.</p>
+  <form id="task-form" class="task-form"><label class="sr-only" for="task-input">Nova tarefa</label><input id="task-input" maxlength="100" placeholder="Digite uma tarefa escolar..." required><button class="button primary" type="submit">Adicionar</button></form>
+  <ul id="task-list" class="task-list" aria-live="polite"></ul><p id="task-empty" class="muted">Nenhuma tarefa cadastrada.</p>
+  <a class="text-link" href="{{ url_for('inicio') }}">← Voltar para o início</a>
+</main><footer><p>Projeto escolar • Primeiros Socorros</p></footer>
+</body></html>

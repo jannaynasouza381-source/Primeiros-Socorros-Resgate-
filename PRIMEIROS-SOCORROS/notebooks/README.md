@@ -1,0 +1,1 @@
+Use esta pasta para notebooks do Google Colab com pesquisas e experimentos relacionados à educação em primeiros socorros. Não use notebooks para orientar procedimentos clínicos sem supervisão qualificada.
