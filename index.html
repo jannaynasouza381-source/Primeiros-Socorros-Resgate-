@@ -1,214 +1,322 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#123b3a">
-  <meta name="description" content="Orientações básicas de primeiros socorros e contatos de emergência.">
-  <title>Socorrista Janaina | Primeiros Socorros</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotham Garagem | Moto Peças & Serviços</title>
+    <!-- Importação do arquivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Socorrista Janaina - início">
-        <span class="brand-mark" aria-hidden="true">✚</span>
-        <span><strong>Socorrista</strong><small>JANAINA</small></span>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
-      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
-        <a href="#inicio">Início</a>
-        <a href="#emergencia">Emergências</a>
-        <a href="#manobras">Manobras</a>
-        <a href="#assistente">Assistente</a>
-        <a href="#contatos">Contatos</a>
-      </nav>
+
+    <!-- Cabeçalho e Menu de Navegação -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#inicio" class="logo">GOTHAM <span>GARAGEM</span></a>
+            
+            <!-- Botão do menu mobile -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                &#9776;
+            </button>
+
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#loja">Loja Virtual</a></li>
+                    <li><a href="#simulador">Orçamento</a></li>
+                    <li><a href="#contato">Agendamento</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botão do Carrinho de Compras -->
+            <button class="btn-carrinho" id="abrir-carrinho">
+                Carrinho (<span id="contador-carrinho">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <!-- Seção Principal (Hero) -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay">
+            <div class="container hero-content">
+                <h1>Alta Performance e Cuidado Extremo para Sua Moto</h1>
+                <p>Mecânica especializada, revisão preventiva, customização e as melhores moto peças do mercado em um só lugar.</p>
+                <div class="hero-buttons">
+                    <a href="#loja" class="btn btn-primary">Ver Moto Peças</a>
+                    <a href="#contato" class="btn btn-secondary">Agendar Revisão</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 1: Sobre a Empresa -->
+    <section id="sobre" class="section">
+        <div class="container grid-sobre">
+            <div class="sobre-texto">
+                <h2 class="section-title">Sobre a Gotham Garagem</h2>
+                <p>A <strong>Gotham Garagem</strong> nasceu da paixão por duas rodas e pela engenharia mecânica de precisão. Atendemos desde motos urbanas do dia a dia até modelos esportivos e custom de alta cilindrada.</p>
+                <p>Contamos com equipamentos modernos de diagnóstico eletrônico, peças originais e uma equipe pronta para garantir sua segurança e desempenho nas ruas ou pistas.</p>
+                
+                <!-- Status da Oficina atualizado via JavaScript -->
+                <div class="status-box">
+                    <span id="status-oficina" class="status-badge">Verificando horário...</span>
+                    <p class="horario-texto"><strong>Funcionamento:</strong> Seg a Sex: 07:00 às 18:00 | Sáb: 07:00 às 13:00</p>
+                </div>
+            </div>
+            <div class="sobre-imagem">
+                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80" alt="Oficina de motos Gotham Garagem">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 2: Nossos Serviços -->
+    <section id="servicos" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title text-center">Serviços Especializados</h2>
+            <p class="section-subtitle text-center">Manutenção completa com garantia e transparência.</p>
+            
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Revisão Geral</h3>
+                    <p>Inspeção completa de freios, suspensão, cabos, fluídos, velas e injeção eletrônica para máxima segurança.</p>
+                    <span class="preco-tag">A partir de R$ 180,00</span>
+                </div>
+                <div class="card">
+                    <h3>Troca de Óleo e Filtros</h3>
+                    <p>Lubrificantes sintéticos e semissintéticos de alta performance com substituição de filtro de óleo e ar.</p>
+                    <span class="preco-tag">A partir de R$ 85,00</span>
+                </div>
+                <div class="card">
+                    <h3>Relação e Pneus</h3>
+                    <p>Substituição de kit relação (coroa, pinhão e corrente), balanceamento e troca de pneus esportivos e urbanos.</p>
+                    <span class="preco-tag">A partir de R$ 120,00</span>
+                </div>
+                <div class="card">
+                    <h3>Elétrica e Injeção</h3>
+                    <p>Diagnóstico por scanner, reparo de chicotes, troca de bateria, estator e limpeza de bicos injetores.</p>
+                    <span class="preco-tag">A partir de R$ 110,00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 3: Loja Virtual de Moto Peças -->
+    <section id="loja" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Loja Virtual - Moto Peças</h2>
+            <p class="section-subtitle text-center">Filtre por categoria e adicione peças ao seu pedido.</p>
+
+            <!-- Filtro Interativo de Categorias -->
+            <div class="filtros">
+                <button class="btn-filtro active" data-categoria="todos">Todos</button>
+                <button class="btn-filtro" data-categoria="motor">Motor & Óleo</button>
+                <button class="btn-filtro" data-categoria="freios">Freios & Transmissão</button>
+                <button class="btn-filtro" data-categoria="acessorios">Acessórios</button>
+            </div>
+
+            <!-- Vitrine de Produtos -->
+            <div class="produtos-grid" id="lista-produtos">
+                <div class="produto-card" data-categoria="motor">
+                    <img src="https://images.unsplash.com/photo-1635073908681-b4dfbd6015e8?auto=format&fit=crop&w=500&q=80" alt="Óleo Sintético 10W40">
+                    <div class="produto-info">
+                        <h3>Óleo Sintético 10W40 (1L)</h3>
+                        <p>Alta proteção térmica para motores 4 tempos.</p>
+                        <div class="produto-footer">
+                            <span class="preco">R$ 68,90</span>
+                            <button class="btn btn-primary btn-add" data-nome="Óleo Sintético 10W40" data-preco="68.90">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-categoria="freios">
+                    <img src="https://images.unsplash.com/photo-1599819811279-d5ad9cccf838?auto=format&fit=crop&w=500&q=80" alt="Kit Relação Aço 1045">
+                    <div class="produto-info">
+                        <h3>Kit Relação Aço 1045</h3>
+                        <p>Corrente com retentor, coroa e pinhão reforçados.</p>
+                        <div class="produto-footer">
+                            <span class="preco">R$ 245,00</span>
+                            <button class="btn btn-primary btn-add" data-nome="Kit Relação Aço 1045" data-preco="245.00">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-categoria="freios">
+                    <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=500&q=80" alt="Pastilha de Freio Sinterizada">
+                    <div class="produto-info">
+                        <h3>Pastilha de Freio Sinterizada</h3>
+                        <p>Frenagem precisa em pistas secas ou molhadas.</p>
+                        <div class="produto-footer">
+                            <span class="preco">R$ 89,90</span>
+                            <button class="btn btn-primary btn-add" data-nome="Pastilha de Freio Sinterizada" data-preco="89.90">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-categoria="acessorios">
+                    <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=500&q=80" alt="Capacete Esportivo Fosco">
+                    <div class="produto-info">
+                        <h3>Capacete Gotham Black Fosco</h3>
+                        <p>Viseira antirrisco, entradas de ar e forro removível.</p>
+                        <div class="produto-footer">
+                            <span class="preco">R$ 499,00</span>
+                            <button class="btn btn-primary btn-add" data-nome="Capacete Gotham Black Fosco" data-preco="499.00">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-categoria="motor">
+                    <img src="https://images.unsplash.com/photo-1615172282427-9a57ef2d142e?auto=format&fit=crop&w=500&q=80" alt="Vela de Ignição Iridium">
+                    <div class="produto-info">
+                        <h3>Vela de Ignição Iridium</h3>
+                        <p>Partida rápida, melhor queima e economia de combustível.</p>
+                        <div class="produto-footer">
+                            <span class="preco">R$ 79,00</span>
+                            <button class="btn btn-primary btn-add" data-nome="Vela de Ignição Iridium" data-preco="79.00">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-categoria="acessorios">
+                    <img src="https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&w=500&q=80" alt="Manopla Esportiva Alumínio">
+                    <div class="produto-info">
+                        <h3>Manopla Esportiva Alumínio</h3>
+                        <p>Acabamento anodizado preto com aderência ergonômica.</p>
+                        <div class="produto-footer">
+                            <span class="preco">R$ 65,00</span>
+                            <button class="btn btn-primary btn-add" data-nome="Manopla Esportiva Alumínio" data-preco="65.00">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 4: Simulador de Orçamento de Oficina -->
+    <section id="simulador" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title text-center">Simulador de Orçamento</h2>
+            <p class="section-subtitle text-center">Selecione os serviços desejados para calcular o valor estimado na oficina.</p>
+
+            <div class="simulador-box">
+                <div class="simulador-opcoes">
+                    <label class="checkbox-item">
+                        <input type="checkbox" class="servico-check" value="180">
+                        <span>Revisão Geral Completa (R$ 180,00)</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" class="servico-check" value="85">
+                        <span>Troca de Óleo + Filtro (R$ 85,00)</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" class="servico-check" value="120">
+                        <span>Troca de Kit Relação (R$ 120,00)</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" class="servico-check" value="95">
+                        <span>Alinhamento e Balanceamento (R$ 95,00)</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" class="servico-check" value="110">
+                        <span>Diagnóstico Eletrônico / Injeção (R$ 110,00)</span>
+                    </label>
+                </div>
+
+                <div class="simulador-resultado">
+                    <h3>Total Estimado</h3>
+                    <p class="valor-total" id="valor-simulador">R$ 0,00</p>
+                    <p class="obs-simulador">*Valores referentes à mão de obra básica. Peças adicionais podem ser incluídas na loja.</p>
+                    <button type="button" class="btn btn-secondary" id="limpar-simulador">Limpar Seleção</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 5: Agendamento / Contato com Validação -->
+    <section id="contato" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Agende Seu Serviço</h2>
+            <p class="section-subtitle text-center">Preencha os dados abaixo para reservar seu horário na Gotham Garagem.</p>
+
+            <form id="form-agendamento" class="form-box" novalidate>
+                <div class="form-group">
+                    <label for="nome">Nome Completo *</label>
+                    <input type="text" id="nome" placeholder="Ex: Bruce Wayne" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefone">Telefone / WhatsApp *</label>
+                        <input type="tel" id="telefone" placeholder="(11) 99999-9999" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="moto">Modelo / Cilindrada da Moto *</label>
+                        <input type="text" id="moto" placeholder="Ex: Yamaha MT-07" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="data-servico">Data Preferencial *</label>
+                    <input type="date" id="data-servico" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição do Serviço ou Problema</label>
+                    <textarea id="descricao" rows="4" placeholder="Descreva o que sua moto precisa..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Confirmar Agendamento</button>
+                <div id="mensagem-form" class="mensagem-feedback"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal do Carrinho de Compras -->
+    <div class="modal" id="modal-carrinho">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Seu Carrinho - Gotham Garagem</h3>
+                <button class="fechar-modal" id="fechar-carrinho">&times;</button>
+            </div>
+            <div class="modal-body" id="itens-carrinho">
+                <p class="carrinho-vazio">Seu carrinho está vazio.</p>
+            </div>
+            <div class="modal-footer">
+                <div class="carrinho-total">
+                    Total: <strong id="total-carrinho">R$ 0,00</strong>
+                </div>
+                <button class="btn btn-primary btn-block" id="finalizar-compra">Finalizar Pedido</button>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <main id="conteudo">
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">INFORMAÇÃO QUE PODE SALVAR VIDAS</span>
-          <h1>Em uma emergência,<br><em>cada segundo importa.</em></h1>
-          <p>Orientações iniciais e simples para ajudar você a reconhecer uma situação de emergência, pedir ajuda e agir com segurança enquanto o socorro especializado chega.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#emergencia">Ver orientações</a>
-            <a class="button button-light" href="#contatos">Contatos de emergência</a>
-          </div>
-          <p class="hero-note">Este site é educativo e não substitui treinamento presencial nem orientação dos serviços de emergência.</p>
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3 class="logo">GOTHAM <span>GARAGEM</span></h3>
+                <p>Mecânica de motos, revisão, preparação e loja de peças e acessórios.</p>
+            </div>
+            <div>
+                <h4>Horário de Atendimento</h4>
+                <p>Segunda a Sexta: 07:00 às 18:00</p>
+                <p>Sábado: 07:00 às 13:00</p>
+                <p>Domingo: Fechado</p>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <p>Rua. 01, 102 - Jardim Vitoria II</p>
+                <p>Telefone: (14) 99758-1211</p>
+                <p>contato@gothamgaragem.com.br</p>
+            </div>
         </div>
-        <div class="hero-art" role="img" aria-label="Ilustração de um kit de primeiros socorros">
-          <div class="art-circle"></div>
-          <div class="first-aid-kit"><span>✚</span></div>
-          <div class="art-label"><b>PREVENIR</b><small>• PROTEGER • SOCORRER</small></div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gotham Garagem - Moto Peças & Serviços. Todos os direitos reservados.</p>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <section class="emergency-strip" aria-label="Aviso de emergência">
-      <div class="container strip-inner">
-        <span class="alert-icon">!</span>
-        <p><strong>Perigo imediato ou risco de vida?</strong> Ligue para o serviço de emergência. Não espere uma resposta deste site.</p>
-        <a href="tel:192" class="strip-link">SAMU 192</a>
-        <a href="tel:193" class="strip-link">Bombeiros 193</a>
-      </div>
-    </section>
-
-    <section class="section" id="emergencia">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">PRIMEIROS PASSOS</span>
-          <h2>O que está acontecendo?</h2>
-          <p>Selecione uma situação para ver cuidados iniciais gerais. Se houver risco de vida, ligue imediatamente para o serviço adequado.</p>
-        </div>
-        <div class="case-grid">
-          <article class="case-card">
-            <span class="case-icon">🫀</span><h3>Parada cardíaca</h3>
-            <p>Pessoa inconsciente e que não respira normalmente ou apenas apresenta suspiros.</p>
-            <button class="text-button case-button" data-case="cardiaca">Ver orientação <span>→</span></button>
-          </article>
-          <article class="case-card">
-            <span class="case-icon">🩸</span><h3>Sangramento intenso</h3>
-            <p>Sangue em grande quantidade, contínuo ou que não para com pressão direta.</p>
-            <button class="text-button case-button" data-case="sangramento">Ver orientação <span>→</span></button>
-          </article>
-          <article class="case-card">
-            <span class="case-icon">🔥</span><h3>Queimadura</h3>
-            <p>Lesão causada por calor, líquido quente, vapor ou contato com superfície quente.</p>
-            <button class="text-button case-button" data-case="queimadura">Ver orientação <span>→</span></button>
-          </article>
-          <article class="case-card">
-            <span class="case-icon">😮</span><h3>Engasgo</h3>
-            <p>Dificuldade para respirar, falar ou tossir após alimento ou objeto bloquear a via aérea.</p>
-            <button class="text-button case-button" data-case="engasgo">Ver orientação <span>→</span></button>
-          </article>
-          <article class="case-card">
-            <span class="case-icon">🧠</span><h3>Convulsão</h3>
-            <p>Movimentos involuntários, perda de consciência ou alteração súbita de comportamento.</p>
-            <button class="text-button case-button" data-case="convulsao">Ver orientação <span>→</span></button>
-          </article>
-          <article class="case-card">
-            <span class="case-icon">🦴</span><h3>Suspeita de fratura</h3>
-            <p>Dor forte, deformidade, inchaço ou dificuldade de movimentar um membro após trauma.</p>
-            <button class="text-button case-button" data-case="fratura">Ver orientação <span>→</span></button>
-          </article>
-        </div>
-        <div class="guidance-panel" id="guidancePanel" aria-live="polite">
-          <div class="guidance-placeholder"><span>＋</span><p>Escolha uma situação acima para visualizar as orientações iniciais.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="manobras">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">APRENDA COM SEGURANÇA</span>
-          <h2>Manobras e cuidados básicos</h2>
-          <p>Conheça princípios gerais. A execução correta depende da situação, da idade da vítima e de treinamento.</p>
-        </div>
-        <div class="maneuver-layout">
-          <div class="maneuver-tabs" role="tablist" aria-label="Manobras de primeiros socorros">
-            <button class="maneuver-tab active" role="tab" aria-selected="true" data-tab="rcp">RCP em adultos</button>
-            <button class="maneuver-tab" role="tab" aria-selected="false" data-tab="pressao">Pressão em ferimentos</button>
-            <button class="maneuver-tab" role="tab" aria-selected="false" data-tab="queimadura">Primeiro cuidado em queimadura</button>
-            <button class="maneuver-tab" role="tab" aria-selected="false" data-tab="convulsao">Durante uma convulsão</button>
-          </div>
-          <article class="maneuver-content" id="maneuverContent" aria-live="polite">
-            <span class="content-kicker">MANOBRA 01</span>
-            <h3>Ressuscitação cardiopulmonar (RCP) — adulto</h3>
-            <ol>
-              <li>Verifique se o local está seguro e chame a pessoa em voz alta.</li>
-              <li>Se não responder e não respirar normalmente, peça para alguém ligar 192 e buscar um DEA, se disponível.</li>
-              <li>Coloque a pessoa deitada de costas em superfície firme. Inicie compressões no centro do tórax, fortes e rápidas, se souber realizar.</li>
-              <li>Continue até a chegada do socorro, retorno de sinais de vida ou exaustão. Siga as instruções do atendente do SAMU.</li>
-            </ol>
-            <p class="caution"><strong>Atenção:</strong> treinamento prático é essencial. Se não tiver treinamento, ligue 192 e siga as instruções do atendente; compressões somente no tórax são melhores do que não agir.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="assistente">
-      <div class="container assistant-grid">
-        <div>
-          <span class="eyebrow">ORIENTAÇÃO INICIAL</span>
-          <h2>Assistente de primeiros socorros</h2>
-          <p>Conte qual situação você está enfrentando e veja uma orientação educativa pré-cadastrada. Este assistente funciona localmente e não envia mensagens nem chama serviços por você.</p>
-          <div class="privacy-note">Não informe dados pessoais sensíveis. Em uma emergência real, ligue diretamente para 192 ou 193.</div>
-        </div>
-        <div class="chat-card">
-          <div class="chat-header"><span class="chat-avatar">✚</span><div><strong>Assistente Janaina</strong><small>Orientações educativas automáticas</small></div><span class="online-dot"></span></div>
-          <div class="chat-messages" id="chatMessages" aria-live="polite">
-            <div class="message bot-message">Olá! Posso mostrar orientações gerais. Primeiro: o local está seguro? Se houver risco imediato, ligue 192 (SAMU) ou 193 (Bombeiros).</div>
-          </div>
-          <form id="chatForm" class="chat-form">
-            <label class="sr-only" for="chatInput">Descreva a situação</label>
-            <input id="chatInput" type="text" placeholder="Ex.: uma pessoa está engasgada..." maxlength="300" autocomplete="off" required>
-            <button type="submit" aria-label="Enviar mensagem">Enviar</button>
-          </form>
-          <div class="quick-prompts">
-            <button type="button" data-prompt="A pessoa está inconsciente">Inconsciente</button>
-            <button type="button" data-prompt="Há sangramento intenso">Sangramento</button>
-            <button type="button" data-prompt="A pessoa está engasgada">Engasgo</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="contatos">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">PEÇA AJUDA</span>
-          <h2>Contatos de emergência</h2>
-          <p>Ao ligar, informe o endereço completo, um ponto de referência, o que aconteceu, quantas pessoas precisam de ajuda e as condições da vítima.</p>
-        </div>
-        <div class="contact-grid">
-          <article class="contact-card samu">
-            <div class="contact-top"><span class="contact-symbol">✚</span><span>URGÊNCIA MÉDICA</span></div>
-            <h3>SAMU</h3><p>Serviço de Atendimento Móvel de Urgência</p>
-            <a class="phone-number" href="tel:192">192</a>
-            <a class="button button-primary button-full" href="tel:192">Ligar para o SAMU</a>
-          </article>
-          <article class="contact-card fire">
-            <div class="contact-top"><span class="contact-symbol">♨</span><span>RESGATE E INCÊNDIO</span></div>
-            <h3>Bombeiros</h3><p>Incêndios, salvamentos e situações de risco</p>
-            <a class="phone-number" href="tel:193">193</a>
-            <a class="button button-dark button-full" href="tel:193">Ligar para Bombeiros</a>
-          </article>
-          <article class="contact-card police">
-            <div class="contact-top"><span class="contact-symbol">★</span><span>EMERGÊNCIA POLICIAL</span></div>
-            <h3>Polícia Militar</h3><p>Emergências policiais e situações de violência</p>
-            <a class="phone-number" href="tel:190">190</a>
-            <a class="button button-outline button-full" href="tel:190">Ligar para Polícia</a>
-          </article>
-        </div>
-        <div class="call-script">
-          <h3>O que dizer ao telefone?</h3>
-          <p>Fale com calma e responda às perguntas do atendente. Você pode usar este roteiro:</p>
-          <form id="emergencyForm" class="emergency-form">
-            <label>Seu nome <input id="callerName" type="text" maxlength="80" placeholder="Como podemos chamar você?"></label>
-            <label>Cidade e endereço da ocorrência <input id="callerPlace" type="text" maxlength="160" placeholder="Cidade, rua, número e referência"></label>
-            <label>O que está acontecendo? <textarea id="callerSituation" rows="3" maxlength="500" placeholder="Descreva o que aconteceu e como a pessoa está."></textarea></label>
-            <button class="button button-primary" type="submit">Montar resumo para a ligação</button>
-          </form>
-          <div id="callSummary" class="call-summary" aria-live="polite" hidden></div>
-          <p class="form-disclaimer">O formulário apenas organiza as informações na tela. Ele não envia dados, não faz uma chamada e não substitui o contato direto com a emergência.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <a class="brand brand-footer" href="#inicio"><span class="brand-mark">✚</span><span><strong>Socorrista</strong><small>JANAINA</small></span></a>
-      <p>Informação, prevenção e cuidado.</p>
-      <small>© <span id="year"></span> Socorrista Janaina. Conteúdo educativo.</small>
-    </div>
-    <div class="container footer-warning">Este material não substitui avaliação profissional, cursos certificados ou instruções dos atendentes de emergência. Nunca coloque sua própria segurança em risco.</div>
-  </footer>
+    <!-- Importação do arquivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
